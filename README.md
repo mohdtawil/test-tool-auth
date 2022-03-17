@@ -1,2 +1,2 @@
 # test-tool-auth
-1- go to .env file
+# 1- go to .env file
