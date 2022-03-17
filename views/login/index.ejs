@@ -1,0 +1,49 @@
+<%- include('../../partials/header.ejs') %>
+<%- include('../../partials/navbar.ejs' , {currentUser: currentUser}) %>
+<style>
+    .logo {
+        width: 400px;
+    }
+    .gradient-button {
+    margin: 10px;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 20px;
+    padding: 10px;
+    
+    text-decoration: none;
+    
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: #FFF;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 5px;
+    padding-right: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 15px;
+}
+
+.gradient-button-4 { background-image: linear-gradient(to right, #7ED8F6 0%, #4994FB 51%, #7ED8F6 100%)}
+.gradient-button-4:hover { text-decoration: none; color: #FFF; }
+</style>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-12 text-center mb-4">
+            <h1 style="color: #4994FB;">Login Page</h1>
+        </div>
+        <div class="col-md-6 ">
+            <img class="logo" src="https://res.cloudinary.com/dxdrfzvvo/image/upload/v1647356641/tool-auth/user_nas4cy.png" alt="">
+        </div>
+        <div class="col-md-6 d-flex justify-content-start align-items-center ">
+            <a href="<%= CLARISA_AUTH_URL %>/auth/client?client_id=<%= CLIENT_ID %>" class=" gradient-button gradient-button-4"> 
+                <img width="35" style="margin: 0 0.5em;" src="https://res.cloudinary.com/dxdrfzvvo/image/upload/v1647358707/tool-auth/cgiarlogo-white_frmykx.png" alt="">
+                
+                <span class="mt-2">Login with Clarisa</span></a>
+        </div>
+    </div>
+</div>
+
+<%- include('../../partials/footer.ejs') %>
+    

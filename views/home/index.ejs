@@ -1,0 +1,41 @@
+<%- include('../../partials/header.ejs') %>
+<%- include('../../partials/navbar.ejs' , {currentUser: currentUser}) %>
+<style>
+    .key {
+        color: #4994FB;
+    }
+    .value {
+        color: #a2a6aa;
+    }
+</style>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-12">
+           <% if(currentUser != null) { %>
+            <p class="fw-bold mb-4" style="color: #4994FB; font-size: 2em;">Your information is:</p>            <% if(currentUser.firstName) { %>
+                <p><span class="key">Name: <span class="mx-3 value"><%= currentUser.firstName %> <%= currentUser.lastName %></span></span></p>
+            <% } %>
+            <% if(currentUser.email) { %>
+                <p><span class="key">Email: <span class="mx-3 value"><%= currentUser.email %> </span></span></p>
+            <% } %>
+            <% if(currentUser.mobile) { %>
+                <p><span class="key">Mobile: <span class="mx-3 value"><%= currentUser.mobile %></span></span></p>
+            <% } %>
+            <% if(currentUser.title) { %>
+                <p><span class="key">Title: <span class="mx-3 value"><%= currentUser.title %></span></span></p>
+            <% } %>
+            <% if(currentUser.bio) { %>
+                <p><span class="key">Bio: <span class="mx-3 value"><%= currentUser.bio %></span></span></p>
+            <% } %>
+            <% if(currentUser.organization) { %>
+                <p><span class="key">Organization: <span class="mx-3 value"><%= currentUser.organization %></span></span></p>
+            <% } %>
+           <% } else { %>
+            <p class="fs-5" style="color: #4994FB;">You are not logged in</p>
+           <% } %>
+            
+        </div>
+    </div>
+</div>
+<%- include('../../partials/footer.ejs') %>
+    
