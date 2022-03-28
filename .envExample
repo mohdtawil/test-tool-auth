@@ -1,4 +1,4 @@
-CLIENT_SECRET=f9a3b232-5840-463f-b7fd-60bc221e9983
-CLIENT_ID=43
+CLIENT_SECRET=xxxxxxxxxxxxxxxxxxxxxxx
+CLIENT_ID=xx
 CLARISA_AUTH_URL=https://cauth.loc.codeobia.com
 TOKEN_SECRET=09f26e402586e2faa8da4c
